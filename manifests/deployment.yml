@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kirthicharmkuberneteeshello 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kirthicharmkuberneteeshello
+  template:
+    metadata:
+      labels:
+        app: kirthicharmkuberneteeshello 
+    spec:
+      containers:
+        - name: kirthicharmkuberneteeshello 
+          image: mycontainerregistry555.azurecr.io/kirthicharmkuberneteeshello
+          ports:
+          - containerPort: 8080
